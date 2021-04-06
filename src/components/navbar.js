@@ -6,7 +6,7 @@ const navbar = () => {
     <nav>
       <span class="nav-menu"><!--soon--></span>
       <span class="title">${data.kelas}</span>
-      <span class="dot"></span>
+      <span class="dot" onclick="toggleDark()"></span>
     </nav>`
 };
 hello.style`
@@ -22,16 +22,30 @@ hello.style`
     grid-template-columns: 64px 1fr 64px;
     align-items: center;
   } ---
+  nav.dark{
+    border-bottom-color: #333333;
+  } ---
   nav .title {
     font-size: 18px;
     font-weight: 500;
   } ---
   nav .dot {
-    width: 16px;
-    height: 16px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    background-color: #4f65ea;
-    margin: auto
-  } ---`
+    background-color: rgba(79, 102, 234,.06);
+    display: flex;
+    margin: auto;
+  } ---
+  nav .dot:hover {
+    cursor: pointer;
+  } ---
+  nav.dark .dot {
+    background-color: rgba(255,255,255,.1);
+  } ---
+  nav .dot img {
+    margin: auto;
+  } ---
+  `
 
 export { navbar };

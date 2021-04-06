@@ -4,6 +4,7 @@ import * as event from './components/events.js';
 import {navbar} from './components/navbar.js';
 import {main} from './components/main-page.js';
 
+import {startDark} from './components/darkmode.js';
 
 const app = () => {
   return`
@@ -25,9 +26,14 @@ hello.style`
   } ---
   div.app::-webkit-scrollbar {
     display: none;
+  } ---
+  .dark {
+    background-color: #1f1f1f;
+    color: #eaeaea;
   } ---`
 
 
 //play!
 hello.normalizeCss();
 hello.render(app(),'div#app');
+startDark()

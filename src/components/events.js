@@ -30,5 +30,7 @@ hello.style`
       transform: scale(4);
       opacity: 0;
     }
+  } ---
+  a.mapel.dark span.ripple {
+    background-color: #fff;
   } ---`
-

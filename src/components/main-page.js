@@ -44,6 +44,9 @@ hello.style`
     line-height: 42px;
     margin: 0;
   } ---
+  div.today .day.dark {
+    color: #8093ff;
+  } ---
   div.today .date {
     font-size: 12px;
     line-height: 16px;
@@ -52,10 +55,17 @@ hello.style`
 
 window.delayUrl = URL => setTimeout( function() {window.open(URL)}, 400);
 
+const arrowSvg = () => {
+  return`
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4.6725 15.1725L6 16.5L13.5 9L6 1.5L4.6725 2.8275L10.845 9L4.6725 15.1725Z"/>
+    </svg>`
+}
+
 const schedule = () => {
   return `<div class="schedule">
   ${dataToday.arrMapel.map( ({name,link}) => `
-    <a class="mapel" href="javascript:delayUrl('${link}')" onclick="createRipple()">${name}<img src="assets/arrow forward 18dp.svg"</a>
+    <a class="mapel" href="javascript:delayUrl('${link}')" onclick="createRipple()">${name} ${arrowSvg()}</a>
     `).join('\n')}
   </div>`
 };
@@ -72,7 +82,6 @@ hello.style`
     color: #666;
     font-size: 16px;
     text-decoration: none;
-    background-color: #fafafa;
     margin-bottom: 10px;
     border: 1px solid #e6e6e6;
     position: relative;
@@ -84,11 +93,21 @@ hello.style`
   div.schedule a.mapel:first-child {
     color: #737373;
   } ---
-  div.schedule a.mapel img {
+  div.schedule a.mapel svg {
     width: 18px;
     height: 18px;
     position: absolute;
     right: 16px;
+    fill: #4f65ea;
+  } ---
+  div.schedule a.mapel.dark {
+    color: #ccc !important;
+    background-color: #262626;
+    border-color: #262626;
+  } ---
+  div.schedule a.mapel.dark svg {
+    fill: #8093ff !important;
+    background-color: transparent;
   } ---`
 
 
