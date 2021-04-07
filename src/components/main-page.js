@@ -35,7 +35,7 @@ hello.style`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8vh;
+    margin-bottom: 5vh;
   } ---
   div.today .day {
     color: #4f65ea;
@@ -77,8 +77,8 @@ hello.style`
     align-items: center;
   } ---
   div.schedule a.mapel {
-    width: 226px;
-    height: 52px;
+    width: 200px;
+    height: 48px;
     color: #666;
     font-size: 16px;
     text-decoration: none;
