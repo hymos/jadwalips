@@ -84,7 +84,7 @@ const mapel = {
     link: 'https://mbs-yogya.ucm.ac.id/courses/mapel-kemuhammadiyahan-5-good/homepage/?cl=1'}
 };
 
-export const data = {
+export const datas = {
   kelas: "11 IPS",
   sabtu: { hari: "Sabtu",
     jadwal:[
@@ -139,3 +139,22 @@ export const data = {
   jumat: { hari: "Jumat",
     jadwal:[]},
 };
+
+//empty
+export const data = {
+  kelas: "11 MIPA",
+  sabtu: { hari: "Sabtu",
+    jadwal:[]},
+  ahad: { hari: "Ahad",
+    jadwal:[]},
+  senin: { hari: "Senin",
+    jadwal:[]},
+  selasa: { hari: "Selasa",
+    jadwal:[]},
+  rabu: { hari: "Rabu",
+    jadwal:[]},
+  kamis: { hari: "Kamis",
+    jadwal: []},
+  jumat: { hari: "Jumat",
+    jadwal:[]},
+}
