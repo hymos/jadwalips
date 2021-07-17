@@ -142,7 +142,7 @@ export const datas = {
 
 //empty
 export const data = {
-  kelas: "11 MIPA",
+  kelas: "12 MIPA",
   sabtu: { hari: "Sabtu",
     jadwal:[]},
   ahad: { hari: "Ahad",
